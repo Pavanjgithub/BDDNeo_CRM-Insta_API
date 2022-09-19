@@ -1,0 +1,7 @@
+2022-09-16 19:09:36 INFO  empRestAPI:130 - *******Started UpdateDocument_DocsService API************
+  2022-09-16 19:09:39 INFO  empRestAPI:150 - Pass :Verified status code as 200
+  2022-09-16 19:09:39 INFO  empRestAPI:171 - Pass :Successfully uploaded file to S3
+  2022-09-16 19:09:39 INFO  empRestAPI:192 - Pass :uploaded Filename displayed
+  2022-09-16 19:09:39 INFO  empRestAPI:214 - Pass :content_length > 0
+  2022-09-16 19:09:39 INFO  empRestAPI:236 - Pass :Content type is application/pdf
+  
