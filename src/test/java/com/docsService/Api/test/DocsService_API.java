@@ -22,7 +22,7 @@ public class DocsService_API extends BaseTest
 	 }
 	
 
-	 @Test(enabled = false)
+	 @Test(enabled = true, priority = 1)
 	public void document_meta_data_Docs_service_TC1 () throws Throwable 
 	{		
 		test=extent.createTest("document_meta_data_Docs_service_TC1");
@@ -32,7 +32,7 @@ public class DocsService_API extends BaseTest
 		Response response=serviceHelper.document_meta_data_docs_service_Response_TC1();
 		int name_count=0;
 		String jsonData = response.getBody().asPrettyString();
-		System.out.println("response is "+ jsonData);
+		//System.out.println("response is "+ jsonData);
 		
 		JsonPath  path=response.body().jsonPath();
 		List<Object> jsonObjects=path.getList("");
@@ -62,10 +62,13 @@ public class DocsService_API extends BaseTest
 				test.info("Fail :Missing key attribute in response");
 		
 			}
+	System.out.println(jsonObjects.size());
 		
 		for (int i = 0; i < jsonObjects.size(); i++)
 		{
 			String nameExcel=flib.getCellValue(DocsDervice_API_EXCEL_PATH, "DocsService_API", 4, i+4);
+			//System.out.println(nameExcel);
+			
 			String nameResponse=path.get("name["+i+"]").toString();
 			if (nameExcel.equalsIgnoreCase(nameResponse))
 			{
@@ -122,7 +125,7 @@ public class DocsService_API extends BaseTest
 	}
 
 
-	 @Test
+	 @Test( enabled = true, priority = 2)
 	 public void UpdateDocument_DocsService() throws Throwable
 	 {
 		 test=extent.createTest("UpdateDocument_DocsService");

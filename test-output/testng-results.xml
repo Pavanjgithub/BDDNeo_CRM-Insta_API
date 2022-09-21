@@ -1,40 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-16T19:09:36 IST" name="Default suite" finished-at="2022-09-16T19:09:39 IST" duration-ms="3307">
+  <suite started-at="2022-09-21T13:16:05 IST" name="Default suite" finished-at="2022-09-21T13:16:11 IST" duration-ms="5328">
     <groups>
     </groups>
-    <test started-at="2022-09-16T19:09:36 IST" name="Default test" finished-at="2022-09-16T19:09:39 IST" duration-ms="3307">
+    <test started-at="2022-09-21T13:16:05 IST" name="Default test" finished-at="2022-09-21T13:16:11 IST" duration-ms="5328">
       <class name="com.docsService.Api.test.DocsService_API">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:36 IST" name="setupReport" finished-at="2022-09-16T19:09:36 IST" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:05 IST" name="setupReport" finished-at="2022-09-21T13:16:05 IST" duration-ms="130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:36 IST" name="setup" finished-at="2022-09-16T19:09:36 IST" duration-ms="24" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:05 IST" name="setup" finished-at="2022-09-21T13:16:05 IST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:36 IST" name="init" finished-at="2022-09-16T19:09:36 IST" duration-ms="294" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:05 IST" name="init" finished-at="2022-09-21T13:16:06 IST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="UpdateDocument_DocsService()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:36 IST" name="UpdateDocument_DocsService" finished-at="2022-09-16T19:09:39 IST" duration-ms="2843" status="PASS">
+        <test-method signature="document_meta_data_Docs_service_TC1()[pri:1, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:06 IST" name="document_meta_data_Docs_service_TC1" finished-at="2022-09-21T13:16:10 IST" duration-ms="4134" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UpdateDocument_DocsService -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:39 IST" name="getResult" finished-at="2022-09-16T19:09:39 IST" duration-ms="4" status="PASS">
+        </test-method> <!-- document_meta_data_Docs_service_TC1 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:10 IST" name="getResult" finished-at="2022-09-21T13:16:10 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=UpdateDocument_DocsService status=SUCCESS method=DocsService_API.UpdateDocument_DocsService()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35] output={null}]]]>
+                <![CDATA[[TestResult name=document_meta_data_Docs_service_TC1 status=SUCCESS method=DocsService_API.document_meta_data_Docs_service_TC1()[pri:1, instance:com.docsService.Api.test.DocsService_API@632ceb35] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="teardownReport()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-16T19:09:39 IST" name="teardownReport" finished-at="2022-09-16T19:09:39 IST" duration-ms="231" status="PASS">
+        <test-method signature="UpdateDocument_DocsService()[pri:2, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:10 IST" name="UpdateDocument_DocsService" finished-at="2022-09-21T13:16:11 IST" duration-ms="760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UpdateDocument_DocsService -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:11 IST" name="getResult" finished-at="2022-09-21T13:16:11 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=UpdateDocument_DocsService status=SUCCESS method=DocsService_API.UpdateDocument_DocsService()[pri:2, instance:com.docsService.Api.test.DocsService_API@632ceb35] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="teardownReport()[pri:0, instance:com.docsService.Api.test.DocsService_API@632ceb35]" started-at="2022-09-21T13:16:11 IST" name="teardownReport" finished-at="2022-09-21T13:16:11 IST" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardownReport -->

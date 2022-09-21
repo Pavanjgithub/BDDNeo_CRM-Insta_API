@@ -5,7 +5,7 @@
     <classes>
       <class name="com.docsService.Api.test.DocsService_API">
         <methods>
-          <include name="UpdateDocument_DocsService"/>
+          <include name="document_meta_data_Docs_service_TC1"/>
           <include name="setup"/>
           <include name="setupReport"/>
           <include name="getResult"/>
