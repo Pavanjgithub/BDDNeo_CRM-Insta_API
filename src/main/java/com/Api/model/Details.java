@@ -4,8 +4,6 @@ package com.Api.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.annotation.processing.Generated;
-
 import io.qameta.allure.internal.shadowed.jackson.annotation.JsonAnyGetter;
 import io.qameta.allure.internal.shadowed.jackson.annotation.JsonAnySetter;
 import io.qameta.allure.internal.shadowed.jackson.annotation.JsonIgnore;
@@ -18,7 +16,7 @@ import io.qameta.allure.internal.shadowed.jackson.annotation.JsonPropertyOrder;
 "status",
 "app_ids"
 })
-@Generated("jsonschema2pojo")
+@javax.annotation.Generated("jsonschema2pojo")
 public class Details {
 
 @JsonProperty("status")

@@ -3,8 +3,6 @@ package com.Api.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.annotation.processing.Generated;
-
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -21,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 "cities_master_id",
 "states_master_id"
 })
-@Generated("jsonschema2pojo")
+@javax.annotation.Generated("jsonschema2pojo")
 public class Address {
 
 @JsonProperty("street")

@@ -1,5 +1,9 @@
 package com.docsService.Api.test;
 
+import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 
 import org.testng.annotations.BeforeClass;
@@ -8,6 +12,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.Api.helpers.DocsService_ServiceHelper;
 import com.Api.utils.BaseTest;
+import com.aventstack.extentreports.utils.FileUtil;
 
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -70,6 +75,7 @@ public class DocsService_API extends BaseTest
 			//System.out.println(nameExcel);
 			
 			String nameResponse=path.get("name["+i+"]").toString();
+			//System.out.println(nameResponse);
 			if (nameExcel.equalsIgnoreCase(nameResponse))
 			{
 				name_count++;
@@ -84,10 +90,10 @@ public class DocsService_API extends BaseTest
 		 if (name_count==Integer.parseInt((flib.getCellValue(DocsDervice_API_EXCEL_PATH, "DocsService_API", 3, 4)))) 
 		 {
 			
-			 softAssertions.assertTrue(true, "Pass :All the 73 names are present");
-				System.out.println("Pass :All the 73 names are present");
-				logger.info("Pass :All the 73 names are present");
-				test.info("Pass :All the 73 names are present");
+			 softAssertions.assertTrue(true, "Pass :All the "+ name_count +" names are present");
+				System.out.println("Pass :All the "+ name_count +" names are present");
+				logger.info("Pass :All the "+ name_count +" names are present");
+				test.info("Pass :All the "+ name_count +" names are present");
 
 				
 			}
@@ -140,6 +146,7 @@ public class DocsService_API extends BaseTest
 			System.out.println("response is "+ jsonData);
 			String acknowledgement_id=response.path("acknowledgement_id").toString();
 			System.out.println(acknowledgement_id);
+			flib.setCellData(DocsDervice_API_EXCEL_PATH, "DocsService_API",11, 4, acknowledgement_id);
 			
 			System.out.println("file name "+ response.path("s3_object.filename"));
 			
@@ -250,4 +257,49 @@ public class DocsService_API extends BaseTest
 
 		softAssertions.assertAll();
 	}
+	 
+	 @Test( enabled = true, priority = 3)
+	 public void downloadTC3() throws Throwable
+	 {
+		 test=extent.createTest("UpdateDocument_DocsService");
+			SoftAssert softAssertions = new SoftAssert();
+			logger.info("*******Started UpdateDocument_DocsService API************");
+			
+			
+			String folderpath = "C:\\Users\\NG2574\\API_workspace\\AutomationTest\\TestData\\DocServiveDownload";
+	        File folder = new File(folderpath);
+	  
+	       
+	        System.out.println(folder.exists());
+	      
+	        
+	        if (folder.exists()) //check if folder exist and delete it
+	        {
+	        	flib.deleteDirectory(folder);
+	        	folder.delete();
+			}
+	        
+	  
+			System.out.println(folder.exists());
+			flib.createFolder(folderpath);//create download folder
+			
+			
+			Response response=serviceHelper.downloadDocument_response_TC3();
+			//System.out.println(response.asPrettyString());
+		
+			
+			
+			InputStream downloadFile=response.asInputStream();
+			File downloadFilePath=new File("C:\\Users\\NG2574\\API_workspace\\AutomationTest\\TestData\\DocServiveDownload\\Neogrowth_Incident_Report.pdf");
+		 
+			Files.copy(downloadFile, downloadFilePath.toPath(), StandardCopyOption.REPLACE_EXISTING);//keep the downloded file in the creted folder
+			downloadFile.close();
+	
+			if (downloadFilePath.exists())
+			{
+				System.out.println("File downloded successfully");
+				
+			}
+	
+	    }
 }

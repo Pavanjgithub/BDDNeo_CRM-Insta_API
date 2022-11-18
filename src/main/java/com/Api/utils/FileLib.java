@@ -1,5 +1,6 @@
 package com.Api.utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -64,5 +65,38 @@ public class FileLib
 		return c;
 	}
 	
+	public  void deleteDirectory(File file)
+    {
+        // store all the paths of files and folders present
+        // inside directory
+        for (File subfile : file.listFiles())
+        {
+  
+            // if it is a subfolder
+            // recursiley call function to empty subfolder
+            if (subfile.isDirectory())
+            {
+                deleteDirectory(subfile);
+            }
+  
+            // delete files and empty subfolders
+            subfile.delete();
+        }
+    }
+
+	public void createFolder(String path)
+	{
+		File createDownloadFolder = new File(path);  
+	      //Creating a folder using mkdir() method  
+	      boolean bool = createDownloadFolder.mkdir();  
+	      if(bool)
+	      {  
+	         System.out.println("Folder is created successfully");  
+	      }else
+	      {  
+	         System.out.println("Error Found!");  
+	      }  
+		
+	}
 	
 }

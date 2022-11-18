@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.docsService.Api.test.DocsService_API">
+      <class name="com.authService.Api.test.AuthService_negative_API_TC">
         <methods>
-          <include name="document_meta_data_Docs_service_TC1"/>
           <include name="setup"/>
           <include name="setupReport"/>
-          <include name="getResult"/>
-          <include name="teardownReport"/>
           <include name="init"/>
+          <include name="getResult"/>
+          <include name="authService_verifiyOTP_emptyUsername_TC3c"/>
+          <include name="teardownReport"/>
         </methods>
-      </class> <!-- com.docsService.Api.test.DocsService_API -->
+      </class> <!-- com.authService.Api.test.AuthService_negative_API_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

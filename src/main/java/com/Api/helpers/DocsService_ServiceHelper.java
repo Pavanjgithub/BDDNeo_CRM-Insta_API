@@ -4,6 +4,7 @@ import java.io.File;
 
 import com.Api.constants.AutoConst;
 import com.Api.constants.Endpoint;
+import com.Api.model.DocsService_pojo;
 import com.Api.utils.BaseTest;
 
 import io.restassured.RestAssured;
@@ -48,4 +49,19 @@ public class DocsService_ServiceHelper extends BaseTest implements AutoConst
 	       return response;
 
 	}
+	 
+	
+	 
+	 public Response downloadDocument_response_TC3() throws Throwable 
+	 {
+		 Response response=RestAssured
+				 .given()
+				 
+				 .multiPart("requesting_service","SalesApp") //request_service:salesApp
+				 .multiPart("acknowledgement_id","ps93vpsjcorsxnxyfjosdg") //acknowledgement_id:TC2 value
+				 .post("https://uat.advancesuite.in:3051/external_interfaces/download_doc")
+				 .andReturn();
+				 
+				 return response;
+	 }
 }

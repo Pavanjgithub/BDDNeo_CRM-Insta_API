@@ -1,15 +1,2 @@
-2022-09-21 13:16:06 INFO  empRestAPI:30 - *******Started document_meta_data_Docs_service API************
-  2022-09-21 13:16:08 INFO  empRestAPI:46 - Verifying key attribute in Document meta data request
-  2022-09-21 13:16:08 INFO  empRestAPI:52 - Pass : All the key attribute name,uuid,custom_attributes and is_active is present
-  2022-09-21 13:16:10 INFO  empRestAPI:80 - Getting total name's count
-  2022-09-21 13:16:10 INFO  empRestAPI:89 - Pass :All the 73 names are present
-  2022-09-21 13:16:10 INFO  empRestAPI:103 - Getting status code
-  2022-09-21 13:16:10 INFO  empRestAPI:108 - Pass :Verified status code as 200
-  2022-09-21 13:16:10 INFO  empRestAPI:121 - *******Ended document_meta_data_Docs_service API ***********
-  2022-09-21 13:16:10 INFO  empRestAPI:133 - *******Started UpdateDocument_DocsService API************
-  2022-09-21 13:16:11 INFO  empRestAPI:151 - Pass :Verified status code as 200
-  2022-09-21 13:16:11 INFO  empRestAPI:172 - Pass :Successfully uploaded file to S3
-  2022-09-21 13:16:11 INFO  empRestAPI:193 - Pass :uploaded Filename displayed
-  2022-09-21 13:16:11 INFO  empRestAPI:215 - Pass :content_length > 0
-  2022-09-21 13:16:11 INFO  empRestAPI:237 - Pass :Content type is application/pdf
+2022-11-18 10:50:37 INFO  empRestAPI:30 - *******Started generateOTP_TC1_gp API************
   
