@@ -126,12 +126,12 @@ public class InstaStepDef extends Driver {
 	   IP.clickbusinessnameTF(string);
 	}
 
-	@Then("Enter the value into Verify Your Business Details of BDA {Business Registration Date}")
+	@Then("Enter the value into Verify Your Business Details of BDA {string}")
 	public void enter_the_value_into_verify_your_business_details_of_BDA(String string) {
 	  IP.placeholderclick(string);
 	}
 
-	@Then("Enter the value into Verify Your Business Details of BA {Business Address}")
+	@Then("Enter the value into Verify Your Business Details of BA {string}")
 	public void enter_the_value_into_verify_your_business_details_of_BA(String string) {
 	   IP.SendBuisnessaddressTF(string);
 	}

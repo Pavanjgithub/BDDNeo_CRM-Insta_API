@@ -35,7 +35,7 @@ public class Hooks extends Driver {
 	
 	@After
 	public void AfterScenario() {
-		Lp.Logout();
+		//Lp.Logout();
 		driver.quit();
 	}
 	@AfterStep
